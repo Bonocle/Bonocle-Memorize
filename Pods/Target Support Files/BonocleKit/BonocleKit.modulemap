@@ -1,0 +1,6 @@
+framework module BonocleKit {
+  umbrella header "BonocleKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

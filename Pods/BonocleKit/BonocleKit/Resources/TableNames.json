@@ -1,0 +1,182 @@
+{
+    "languages":
+    [
+        "English",
+        "Arabic",
+        "French",
+        "German",
+        "Spanish",
+        "Italian",
+        "Swedish"
+    ],
+    
+    "tables": [
+        {
+            "data": [
+                {
+                    "table": "en-gb-comp8.ctb",
+                    "tableName": "U.K. English computer braille",
+                    "code": 1
+                },
+                {
+                    "table": "en_US-comp8-ext.tbl",
+                    "tableName": "U.S. English (EBAE) 8-dot computer braille",
+                    "code": 2
+                },
+                {
+                    "table": "en_CA.tbl",
+                    "tableName": "Canadian English computer braille",
+                    "code": 3
+                },
+                {
+                    "table": "en-ueb-g1.ctb",
+                    "tableName": "English (UEB) uncontracted braille",
+                    "code": 4
+                },
+                {
+                    "table": "en-us-g1.ctb",
+                    "tableName": "U.S. English (EBAE) uncontracted braille",
+                    "code": 5
+                },
+                {
+                    "table": "en-ueb-g2.ctb",
+                    "tableName": "English (UEB) contracted braille",
+                    "code": 6
+                },
+                {
+                    "table": "en_US.tbl",
+                    "tableName": "U.S. English (EBAE) contracted braille",
+                    "code": 7
+                },
+                {
+                    "table": "en-gb-g1.utb",
+                    "tableName": "U.K. English uncontracted braille",
+                    "code": 8
+                },
+                {
+                    "table": "en_GB.tbl",
+                    "tableName": "U.K. English contracted braille",
+                    "code": 9
+                },
+                {
+                    "table": "en-us-comp6.ctb",
+                    "tableName": "U.S. English (EBAE) 6-dot computer braille",
+                    "code": 10
+                }
+            ]},
+        {
+            "data": [
+                {
+                    "table": "ar.tbl",
+                    "tableName": "Arabic uncontracted braille",
+                    "code": 11
+                },
+                {
+                    "table": "ar-ar-g2.ctb",
+                    "tableName": "Arabic contracted braille",
+                    "code": 12
+                },
+                {
+                    "table": "ar-ar-comp8.utb",
+                    "tableName": "Arabic computer braille",
+                    "code": 13
+                }
+            ]
+        },
+        {
+            "data": [
+                {
+                    "table": "fr-bfu-comp8.utb",
+                    "tableName": "Unified French 8 dots braille",
+                    "code": 14
+                },
+                {
+                    "table": "fr-bfu-g2.ctb",
+                    "tableName": "Unified French contracted braille",
+                    "code": 15
+                },
+                {
+                    "table": "fr-bfu-comp6.utb",
+                    "tableName": "Unified French 6 dots braille",
+                    "code": 16
+                }
+            ]
+        }, {
+            "data": [
+                {
+                    "table": "de-g0.utb",
+                    "tableName": "German uncontracted braille",
+                    "code": 17
+                },
+                {
+                    "table": "de-g2.ctb",
+                    "tableName": "German fully contracted braille",
+                    "code": 18
+                },
+                {
+                    "table": "de-g1.ctb",
+                    "tableName": "German partially contracted braille",
+                    "code": 19
+                },
+                {
+                    "table": "de-de-comp8.ctb",
+                    "tableName": "German 8 dot computer braille",
+                    "code": 20
+                }
+            ]
+        }
+        ,
+        {
+            "data": [
+                {
+                    "table":  "es.tbl",
+                    "tableName": "Spanish uncontracted braille",
+                    "code": 21
+                },
+                {
+                    "table": "Es-Es-G0.utb",
+                    "tableName": "Spanish computer braille",
+                    "code": 22
+                },
+                {
+                    "table": "es-g2.ctb",
+                    "tableName": "Spanish contracted braille",
+                    "code": 23
+                }
+            ]
+        },
+        {
+            "data": [
+                {
+                    "table":  "it.tbl",
+                    "tableName": "Italian braille",
+                    "code": 24
+                },
+                {
+                    "table": "it-it-comp8.utb",
+                    "tableName": "Italian computer braille",
+                    "code": 25
+                }
+            ]
+        }
+        ,
+        {
+            "data": [
+                {
+                    "table":  "sv-1996.ctb",
+                    "tableName": "Swedish computer braille (1996 standard)",
+                    "code": 26
+                },
+                {
+                    "table": "sv.tbl",
+                    "tableName": "Swedish braille",
+                    "code": 27
+                },
+                {
+                    "table": "sv-1989.ctb",
+                    "tableName": "Swedish computer braille (1989 standard)",
+                    "code": 28
+                }
+            ]
+        }]
+}
