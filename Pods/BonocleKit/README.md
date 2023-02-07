@@ -1,7 +1,7 @@
 # BonocleKit
 Easily communicate between iOS devices and Bonocle using BLE.
 
-[![Version](http://img.shields.io/badge/version-0.5.0-green.svg?style=flat)](https://github.com/Bonocle/BonocleKit)
+[![Version](http://img.shields.io/badge/version-0.5.6-green.svg?style=flat)](https://github.com/Bonocle/BonocleKit)
 [![License: MIT](http://img.shields.io/badge/license-MIT-70a1fb.svg?style=flat)](https://github.com/Bonocle/BonocleKit/blob/master/LICENSE)
 
 ## Requirements
@@ -18,7 +18,7 @@ source 'https://github.com/Bonocle/Specs.git'
 platform :ios, '9.0'
 use_frameworks!
 
-pod 'BonocleKit', '~> 0.5.0'
+pod 'BonocleKit', '~> 0.5.6'
 ```
 
 Then, run the following command:

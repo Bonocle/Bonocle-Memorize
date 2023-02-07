@@ -30,10 +30,11 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
     var connectionState = false
     var subscribeToIMU = false
     var subscribeToOptical = false
+    var subscribeToBaro = false
     var connectFirstBonocle = false
     var autoSrollLoop = false
 
-    public var autoScrollSpeed = 0.7
+    public var autoScrollSpeed = 5.0
     var autoSrollIndex = 0
     public var xSpacing = 200
     public var ySpacing = 200
@@ -82,18 +83,18 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
     public func searchForBonocle(bonocle: BonocleDevice? = nil){
         searchForConnectedDevices()
         if bonocle != nil {
-            centralManager?.scanForPeripherals(withServices: [kBLE_Service_Optical,AdvertisedBLEService] , options: [CBCentralManagerScanOptionAllowDuplicatesKey:false])
+            centralManager?.scanForPeripherals(withServices: [FeedbackBLEService, ControlBLEService] , options: [CBCentralManagerScanOptionAllowDuplicatesKey:false])
             guard let currentBonocle = bonocle else{return}
             connectedBonocle = currentBonocle
-            bonocleMode = .idle
+            bonocleMode = .idle // B000
         }else{
-            centralManager?.scanForPeripherals(withServices: [AdvertisedBLEService] , options: [CBCentralManagerScanOptionAllowDuplicatesKey:false])
-            bonocleMode = .discovery
+            centralManager?.scanForPeripherals(withServices: [FeedbackBLEService] , options: [CBCentralManagerScanOptionAllowDuplicatesKey:false])
+            bonocleMode = .discovery // A000
         }
     }
     
     private func searchForConnectedDevices(){
-        let connectedDevices = centralManager?.retrieveConnectedPeripherals(withServices: [AdvertisedBLEService])
+        let connectedDevices = centralManager?.retrieveConnectedPeripherals(withServices: [FeedbackBLEService])
         for device in connectedDevices!{
             print("Already connected")
             if !peripherals.contains(where: { $0.peripheral?.identifier == device.identifier }){
@@ -173,7 +174,7 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
         print("HELPER -  Scan Stopped")
         peripheral.delegate = self
         //Only look for services that matches transmit uuid
-        peripheral.discoverServices([kBLE_Service_Braille, kBLE_Service_IMU,  kBLE_Service_Buttons, kBLE_Service_Haptics, kBLE_Service_Optical])
+        peripheral.discoverServices ([FeedbackBLEService, ControlBLEService]) // A000 & B000
         connectedPeripheral = peripheral
     }
     
@@ -288,22 +289,12 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
         }
         for service in services {
             switch service.uuid.uuidString {
-            case kBLE_Service_Buttons.uuidString:
-                BLE_Service_Buttons = service
-                peripheral.discoverCharacteristics(buttonsServiceCharacteristics, for: service)
-            case kBLE_Service_Braille.uuidString:
-                BLE_Service_Braille = service
-                peripheral.discoverCharacteristics(brailleServiceCharacteristics, for: service)
-            case kBLE_Service_IMU.uuidString:
-                BLE_Service_IMU = service
-                peripheral.discoverCharacteristics(IMUServiceCharacteristics, for: service)
-            case kBLE_Service_Optical.uuidString:
-                BLE_Service_Optical = service
-                peripheral.discoverCharacteristics(opticalServiceCharacteristics, for: service)
-            case kBLE_Service_Haptics.uuidString:
-                BLE_Service_Haptics = service
-                peripheral.discoverCharacteristics(hapticsServiceCharacteristics, for: service)
-                
+            case FeedbackBLEService.uuidString:
+                BLE_Feedback_Service = service
+                peripheral.discoverCharacteristics(feedbackServiceCharacteristics, for: service)
+            case ControlBLEService.uuidString:
+                BLE_Control_Service = service
+                peripheral.discoverCharacteristics(controlServiceCharacteristics, for: service)
             default:
                 peripheral.discoverCharacteristics(nil, for: service)
             }
@@ -334,12 +325,13 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
         for characteristic in characteristics {
             //looks for the right characteristic
             
-            if      (service.hasUUID(uuid: kBLE_Service_Optical) && subscribeToOptical)
-                        ||  (service.hasUUID(uuid: kBLE_Service_IMU) && subscribeToIMU)
-                        ||  service.hasUUID(uuid: kBLE_Service_Buttons)
-                        ||  service.hasUUID(uuid: kBLE_Service_Braille)
+                        if (characteristic.hasUUID(uuid: kBLE_Characteristic_Optical_XY) && subscribeToOptical)
+                        ||  (characteristic.hasUUID(uuid: kBLE_Characteristic_IMU_XYZ) && subscribeToIMU)
+                        ||  (characteristic.hasUUID(uuid: kBLE_Characteristic_Baro) && subscribeToBaro)
+                        ||  characteristic.hasUUID(uuid: kBLE_Characteristic_Buttons)
+                        ||  characteristic.hasUUID(uuid: kBLE_Characteristic_Braille)
                         ||  characteristic.hasUUID(uuid: kBLE_Characteristic_Battery)
-                        ||  characteristic.hasUUID(uuid: kBLE_Characteristic_Device_Config){
+                        ||  characteristic.hasUUID(uuid: kBLE_Characteristic_API){
                 peripheral.setNotifyValue(true, for: characteristic)
                 print("Subscribed to characteristic: \(characteristic.uuid)")
             }
@@ -366,26 +358,40 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
                         print("BLE_Characteristic_Braille: \(characteristic.uuid)")
                     }
                     
-                    if characteristic.hasUUID(uuid: kBLE_Characteristic_Optical_Config) {
-                        per.bonocleCharacteristic?.BLE_Characteristic_Optical_Config = characteristic
-                        updateOpticalSpacing(peripheral: getCurrentBonocle(peripheral), x_spacing: self.xSpacing, y_spacing: self.ySpacing)
-                        //*********cancelScan()******
-                        print("BLE_Characteristic_Optical_Config: \(characteristic.uuid)")
-                    }
-                    
-                    if characteristic.hasUUID(uuid: kBLE_Characteristic_IMU_Config) {
-                        per.bonocleCharacteristic?.BLE_Characteristic_IMU_Config = characteristic
-                        updateIMUConfig(peripheral: getCurrentBonocle(peripheral), res: self.IMUConfig)
-                        //*********cancelScan()******
-                        print("BLE_Characteristic_IMU_Config: \(characteristic.uuid)")
-                    }
-                    
-                    if characteristic.hasUUID(uuid: kBLE_Characteristic_Device_Config) {
-                        per.bonocleCharacteristic?.BLE_Characteristic_Device_Config = characteristic
+                    if characteristic.hasUUID(uuid: kBLE_Characteristic_API) {
+                        per.bonocleCharacteristic?.BLE_Characteristic_API = characteristic
+                        
+                        print("REQUESTING Device Config")
+                        var data: [UInt8] = [0x00,0x06,0x00]
+                        let enableBytes = NSData(bytes: &data, length:data.count)
+                        peripheral.writeValue(enableBytes as Data, for: characteristic, type: CBCharacteristicWriteType.withResponse)
                         
                         //*********cancelScan()******
                         peripheral.readValue(for: characteristic)
-                        //                saveDeviceConfig(peripheral: peripheral, deviceConfig: bonocleConfigModel)
+                        print("BLE_Characteristic_Device_Config: \(characteristic.uuid)")
+                    }
+                    
+                    if characteristic.hasUUID(uuid: kBLE_Characteristic_Baro) {
+                        per.bonocleCharacteristic?.BLE_Characteristic_Baro = characteristic
+                        
+                        //*********cancelScan()******
+                        peripheral.readValue(for: characteristic)
+                        print("BLE_Characteristic_Device_Config: \(characteristic.uuid)")
+                    }
+                    
+                    if characteristic.hasUUID(uuid: kBLE_Characteristic_Optical_XY) {
+                        per.bonocleCharacteristic?.BLE_Characteristic_Optical_Config = characteristic
+                        
+                        //*********cancelScan()******
+                        peripheral.readValue(for: characteristic)
+                        print("BLE_Characteristic_Device_Config: \(characteristic.uuid)")
+                    }
+                    
+                    if characteristic.hasUUID(uuid: kBLE_Characteristic_IMU_XYZ) {
+                        per.bonocleCharacteristic?.BLE_Characteristic_IMU_Config = characteristic
+                        
+                        //*********cancelScan()******
+                        peripheral.readValue(for: characteristic)
                         print("BLE_Characteristic_Device_Config: \(characteristic.uuid)")
                     }
                     
@@ -419,8 +425,11 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
         case kBLE_Characteristic_Battery.uuidString:
             handleBatteryEvent(peripheral: getCurrentBonocle(peripheral), value: characteristic.value)
             return
-        case kBLE_Characteristic_Device_Config.uuidString:
-            handleDeviceConfigValues(peripheral: peripheral, value: characteristic.value)
+        case kBLE_Characteristic_Baro.uuidString:
+            handleBaroEvent(peripheral:  getCurrentBonocle(peripheral), value: characteristic.value)
+            return
+        case kBLE_Characteristic_API.uuidString:
+            handleAPIEvent(peripheral: peripheral, value: characteristic.value)
             return
         default:
             return
@@ -459,7 +468,7 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
         
         if (characteristic.isNotifying) {
             print ("Subscribed. Notification has begun for: \(characteristic.uuid)")
-            if characteristic.uuid.uuidString == "C001" {
+            if characteristic.uuid.uuidString == kBLE_Characteristic_Buttons.uuidString {
                 if(self.deviceDelegate != nil){
                     connectionState = true
                     let connectedBonoclesCount = peripherals.filter {$0.peripheral?.state == .connected}
@@ -501,20 +510,10 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
             switch buttonNumber {
             case 0:
                 print(peripheral.peripheral?.name ?? "" , "Left Button")
-                switch handPreference {
-                case .right:
-                    button = .left
-                case .left:
-                    button = .right
-                }
+                button = .left
             case 1:
                 print(peripheral.peripheral?.name ?? "","Right Button")
-                switch handPreference {
-                case .right:
-                    button = .right
-                case .left:
-                    button = .left
-                }
+                button = .right
             case 2:
                 print(peripheral.peripheral?.name ?? "","Middle Button")
                 button = .middle
@@ -607,30 +606,50 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
         print(value!.hexEncodedString())
     }
     
+    public func handleAPIEvent(peripheral: CBPeripheral, value: Data?){
+        print("handleAPIEvent",value?.count as Any)
+        if let value = value, value.count >= 2{
+            print("handleAPIEvent:", value[0] , value[1])
+            if value[1] == 0x06{
+                handleDeviceConfigValues(peripheral: peripheral, value: value)
+            }
+        }
+        
+        if let value = value{
+            print("handleAPIEvent Values:")
+            var index = 0
+            for _ in value {
+                print(value[index])
+                index += 1
+            }
+        }
+        
+    }
+    
     public func handleDeviceConfigValues(peripheral: CBPeripheral, value: Data?){
         print("Get Device Conig Values./././././././././././././././",value?.count as Any)
-        if let value = value, value.count >= 7{
-            print("Hand Preference:",value[0])
-            print("Braille Table:", value[1] , value[2] , value[3])
-            print("Auto Scroll Speed:",value[4])
-            print("Reading Space:",value[5])
-            print("Navigation Space:",value[6])
-            switch value[0]{
+        if let value = value, value.count >= 9, value[1] == 0x06{
+            print("Hand Preference:",value[2])
+            print("Braille Table:", value[3] , value[4] , value[5])
+            print("Auto Scroll Speed:",value[6])
+            print("Reading Space:",value[7])
+            print("Navigation Space:",value[8])
+            switch value[2]{
             case 0:
                 handPreference = .right
             case 1:
                 handPreference = .left
             default:return
             }
-            self.autoScrollSpeed = Double(value[4])
-            self.xSpacing = Int(value[5])
-            self.ySpacing = Int(value[6])
+            self.autoScrollSpeed = Double(value[6])
+            self.xSpacing = Int(value[7])
+            self.ySpacing = Int(value[8])
             
-            bonocleDevices.append(BonocleDevice(peripheral: peripheral, reading_spacing: Int(value[5]), navigation_spacing: Int(value[6]), auto_scroll_speed: Int(value[4]), vibration_strength: 1, languages: [], UUID: peripheral.identifier, hand_preference: handPreference, connected: true))
+            bonocleDevices.append(BonocleDevice(peripheral: peripheral, reading_spacing: Int(value[7]), navigation_spacing: Int(value[8]), auto_scroll_speed: Int(value[6]), vibration_strength: 1, languages: [], UUID: peripheral.identifier, hand_preference: handPreference, connected: true))
             
-            if(self.deviceDelegate != nil){
-//                self.deviceDelegate!.foundDevices(bonocleDevice: bonocleDevices)
-            }
+//            if(self.deviceDelegate != nil){
+////                self.deviceDelegate!.foundDevices(bonocleDevice: bonocleDevices)
+//            }
         }
     }
     
@@ -672,6 +691,16 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
             }
         }
         
+    }
+    
+    private func handleBaroEvent(peripheral: BonocleDevice, value: Data?){
+        print("Baro Changed")
+        print(value!.hexEncodedString())
+        
+        if(self.deviceDelegate != nil){
+            let BaroValue = Int(value![0])
+            self.deviceDelegate!.baroState(peripheral: peripheral, value: BaroValue)
+        }
     }
     
     private func handleAutoScrollSpeedUpdated(peripheral: BonocleDevice, value: Data?){
@@ -736,7 +765,7 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
             case .left:
                 data[3] = 0x02
             case .both:
-                data[3] = 0x3
+                data[3] = 0x03
             }
             let enableBytes = NSData(bytes: &data, length:data.count)
             
@@ -759,7 +788,7 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
             case .left:
                 data[3] = 0x02
             case .both:
-                data[3] = 0x3
+                data[3] = 0x03
             }
             let enableBytes = NSData(bytes: &data, length:data.count)
             
@@ -809,9 +838,8 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
         self.xSpacing = x_spacing
         self.ySpacing = y_spacing
         if peripheral.bonocleCharacteristic?.BLE_Characteristic_Optical_Config != nil && x_spacing.inRange() && y_spacing.inRange() {
-            var data = [x_spacing.toUInt8(), y_spacing.toUInt8()]
-            let enableBytes = NSData(bytes: &data, length:data.count)
-            peripheral.peripheral?.writeValue(enableBytes as Data, for: (peripheral.bonocleCharacteristic?.BLE_Characteristic_Optical_Config)!, type: CBCharacteristicWriteType.withResponse)
+            let data = [x_spacing.toUInt8(), y_spacing.toUInt8()]
+            bonocleBLEAPI(peripheral: peripheral, apiData: data, apiType: .optical)
         }
     }
     
@@ -820,9 +848,8 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
         self.xSpacing = opticalValue
         self.ySpacing = opticalValue
         if peripheral.bonocleCharacteristic?.BLE_Characteristic_Optical_Config != nil && opticalValue.inRange() && opticalValue.inRange() {
-            var data = [opticalValue.toUInt8(), opticalValue.toUInt8()]
-            let enableBytes = NSData(bytes: &data, length:data.count)
-            peripheral.peripheral?.writeValue(enableBytes as Data, for: (peripheral.bonocleCharacteristic?.BLE_Characteristic_Optical_Config)!, type: CBCharacteristicWriteType.withResponse)
+            let data = [opticalValue.toUInt8(), opticalValue.toUInt8()]
+            bonocleBLEAPI(peripheral: peripheral, apiData: data, apiType: .optical)
         }
     }
     
@@ -848,9 +875,7 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
         self.IMUConfig = res
         
         if peripheral.bonocleCharacteristic?.BLE_Characteristic_IMU_Config != nil && res.inRange(){
-            var data = [res.toUInt8()]
-            let enableBytes = NSData(bytes: &data, length:data.count)
-            peripheral.peripheral?.writeValue(enableBytes as Data, for: (peripheral.bonocleCharacteristic?.BLE_Characteristic_IMU_Config)!, type: CBCharacteristicWriteType.withResponse)
+            bonocleBLEAPI(peripheral: peripheral, apiData: [res.toUInt8()], apiType: .Imu)
         }
     }
     
@@ -906,6 +931,8 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
         self.autoSrollLoop = loop
         self.autoSrollIndex = 0
         self.autoScrollSpeed = scrollSpeed ?? autoScrollSpeed
+        print(self.autoScrollSpeed)
+        print(self.autoScrollSpeed)
         if text.count > 1 {
             updateTimer(peripheral: peripheral)
         }else{
@@ -933,7 +960,7 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
     }
     
     public func saveDeviceConfig(deviceConfig: BonocleDevice){
-        if  deviceConfig.bonocleCharacteristic?.BLE_Characteristic_Device_Config != nil && deviceConfig.peripheral != nil{
+        if  deviceConfig.bonocleCharacteristic?.BLE_Characteristic_API != nil && deviceConfig.peripheral != nil{
             var data: [UInt8] = []
             switch deviceConfig.hand_preference {
             case .left:
@@ -969,11 +996,42 @@ public class BonocleCommunicationHelper:  NSObject, CBCentralManagerDelegate, CB
             if let bonocleName = deviceConfig.bonocle_name, !bonocleName.isEmpty{
                 let name = [UInt8](bonocleName.utf8)
                 data.append(name.count.toUInt8())
-                data.append(contentsOf: name)
+                if name.count > 4 && name.count < 29 {
+                    data.append(contentsOf: name)
+                }
             }
             
-            let enableBytes = NSData(bytes: &data, length:data.count)
-            deviceConfig.peripheral!.writeValue(enableBytes as Data, for: (deviceConfig.bonocleCharacteristic?.BLE_Characteristic_Device_Config)!, type: CBCharacteristicWriteType.withResponse)
+            bonocleBLEAPI(peripheral: deviceConfig, apiData: data, apiType: .userConfig)
         }
+    }
+    
+    // Bonocle API
+    func bonocleBLEAPI(peripheral: BonocleDevice, apiData: [UInt8], apiType: BonocleAPI){
+        if  peripheral.bonocleCharacteristic?.BLE_Characteristic_API != nil{
+             var data: [UInt8] = []
+             
+             data.append(0x00)  // Counter
+             
+             switch apiType{
+             case .userConfig:
+                 data.append(0x06) // Command
+                 apiData.forEach { // Byte
+                     data.append($0)
+                 }
+             case .optical:
+                 data.append(0x07) // Command
+                 data.append(apiData[0]) // Byte
+                 data.append(apiData[1]) // Byte
+             case .Imu:
+                 data.append(0x08) // Command
+                 data.append(apiData[0]) // Byte
+             case .braille:
+                 data.append(0x09) // Command
+                 data.append(apiData[0]) // Byte
+             }
+             
+            let enableBytes = NSData(bytes: &data, length:data.count)
+            peripheral.peripheral?.writeValue(enableBytes as Data, for: (peripheral.bonocleCharacteristic?.BLE_Characteristic_API!)!, type: CBCharacteristicWriteType.withResponse)
+         }
     }
 }

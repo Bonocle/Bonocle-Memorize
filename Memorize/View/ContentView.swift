@@ -8,9 +8,29 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel: EmojiMemoryGame
-    
+    @State var isBonocleMenuPresented = false
+
     var body: some View {
         VStack {
+            VStack {
+                VStack{
+                    Color.gray.frame(height: 1 / UIScreen.main.scale)
+                }
+                HStack {
+                    Button {
+                        isBonocleMenuPresented.toggle()
+                    } label: {
+                        Image(systemName: "circle.fill")
+                            .foregroundColor(viewModel.statusView)
+                        Text(viewModel.bonocleNameLabel)
+                        Image(systemName: "chevron.down")
+                            .foregroundColor(.gray)
+                    }
+                }
+                VStack{
+                    Color.gray.frame(height: 1 / UIScreen.main.scale)
+                }
+            }.padding()
             Grid(viewModel.cards) { card in
                 CardView(card: card)
                     .onTapGesture {
@@ -33,6 +53,9 @@ struct ContentView: View {
                     .cornerRadius(5)
             }
         }
+        .popover(isPresented: $isBonocleMenuPresented, content: {
+            BonocleStatusServiceRepresentable()
+        })
         .padding()
     }
 }

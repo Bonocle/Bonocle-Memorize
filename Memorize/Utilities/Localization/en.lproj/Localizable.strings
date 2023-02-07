@@ -1,0 +1,93 @@
+/* 
+  Localizable.strings
+  Bonocle Alphabet
+
+  Created by Andrew on 11/17/21.
+  Copyright © 2021 Andrew. All rights reserved.
+*/
+"screen_title" = "Learn Braille";
+"trophies_title" = "My Trophies";
+"settings_title" = "Settings";
+"practice_title" = "Learn Braille";
+"segmented_0" = "Alphabet";
+"segmented_1" = "Numbers";
+"segmented_2" = "Practice";
+
+
+"appLang_Btn" = "App Language";
+"contentLang_Btn" = "Content Language";
+"audio_label" = "Audio :";
+"tutorial_Btn" = "Tutorial";
+"arabic" = "Arabic";
+
+
+/* Class = Common Assets */
+"backBtn" = "back";
+"Cancel" = "Cancel" ;
+"ok" = "Ok" ;
+"Skip" = "Skip" ;
+"Get Started" = "Get Started" ;
+
+// Tabbar
+"tabbar_0" = "Find Spelling";
+"tabbar_1" = "Lists";
+"tabbar_2" = "Settings";
+
+// Find Spelling
+"Hold_to_start" = "Hold on the action button to start dictation";
+"Add_to_list" = "Add to list";
+"Hear_again" = "Hear again";
+"Listening" = "Listening...";
+"AddedSuccessfully" = "Added successfully";
+"AlreadyAdded" = "Already added";
+"wellDone" = "Well done" ;
+"customeAlertMsg" = "Navigate between letters by the next and the previous buttons or by moving the device right and left. press the middle button to hear the word again and the action button to add the word to a list." ;
+
+// Practice
+"my_list_title" = "My List";
+"add_new_list_btn" = "New List";
+"add_new_list_desc" = "Add words from your search or create your own list";
+"add_new_list_title" = "Add new list";
+"update_list_title" =  "Update";
+"cell_list_Name" =  "Find spelling words list";
+"continue_Btn" =  "Continue";
+"words" =  " words";
+"Start" = "Start";
+"Continue" = "Continue";
+"Completed" = "Completed";
+"TheWordIs" = "The word is %@";
+"Hint" = "Hint";
+"DeleteMsg" = "Are you sure you want to delete ";
+"deleteTitle" =  "Delete ";
+
+
+// Setting View
+"settingViewTitle" = "Note Settings";
+"English Language Type" = "English Language Type" ;
+"Braille Code" = "Braille Code" ;
+"Horizontal Spacing" = "Horizontal Spacing" ;
+"Audio" = "Audio";
+"Tutorial" = "Tutorial" ;
+"App Language" = "App Language" ;
+"Line navigation" = "Line navigation";
+
+"bonocle_status_popup" = "Bonocle Connection";
+"bonocle_menu_info" = "Enter pairing mode by holding down the Mode button, Connect up to 10 Bonocles";
+"trying_to_connect" = "Trying to Connect";
+"bonocle_connected" = "Connected";
+"bonocle_disconnected" = "Not Connected";
+"bonocle_status_connected" = " Bonocle Connected";
+"bonocle_status_disconnected" = "Bonocle not connected";
+"Bonocle Connection menu Button" = "Bonocle Connection menu Button";
+"Double tap to disconnect" = "Double tap to disconnect";
+"Double tap to connect" = "Double tap to connect";
+"App Language" = "App Language" ;
+"Reading Mode" = "Reading Mode" ;
+"Read assist" = "Read assist" ;
+"Share" = "Share" ;
+"Favorite" = "Favorite";
+"Delete" = "Delete";
+"Unfavorite" = "Unfavorite";
+"Motion" = "Motion";
+"Auto scroll" = "Auto scroll";
+"Tilt" = "Tilt";

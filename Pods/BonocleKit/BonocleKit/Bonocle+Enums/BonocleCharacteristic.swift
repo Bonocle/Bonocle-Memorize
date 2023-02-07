@@ -14,6 +14,7 @@ public struct BonocleCharacteristic{
     var BLE_Characteristic_Optical_Config: CBCharacteristic?
     var BLE_Characteristic_Auto_Scroll: CBCharacteristic?
     var BLE_Characteristic_IMU_Config: CBCharacteristic?
-    var BLE_Characteristic_Device_Config: CBCharacteristic?
+    var BLE_Characteristic_API: CBCharacteristic?
+    var BLE_Characteristic_Baro: CBCharacteristic?
     var BLE_Characteristic_Battery: CBCharacteristic?
 }

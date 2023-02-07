@@ -3,49 +3,50 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1754E3732517F7844B272F92A1F7EFE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		1FE17EAB228AE6AA2A57B25F1D0A2067 /* BonocleModes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42F5E1A2CEDA3E5907ECE0B53DC191 /* BonocleModes.swift */; };
-		250F27EF6910E6A9534B413DB48C63BE /* AutoScrollSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CF5A52D7C4A66D72DBAD78BD196B5 /* AutoScrollSpeed.swift */; };
-		3C747754294AE91F1F51E059F571B9B0 /* BonocleCommunicationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66AE535BC47B6E8BEEA1B0BA93DF5EE /* BonocleCommunicationHelper.swift */; };
-		41611785F7E0F95484845CF1F79931A2 /* HapticMotors+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A37132EE96D83BE072738517E812930 /* HapticMotors+Events.swift */; };
-		456E77C8135C384892FED03FC0098111 /* JSONParser+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F09A1BD991C0421F9DD4701F8C04AC /* JSONParser+EXT.swift */; };
-		48941C3601FA75A74100ED5483A9F074 /* HapticStrength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF80A19E2172D2E57C487307B437583 /* HapticStrength.swift */; };
-		4CE35C9D2665DCB60D8329C7A7DB2911 /* CoreBluetooth+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C5FDA957D4CFC87E73D28E4C4469D /* CoreBluetooth+EXT.swift */; };
-		51436C3CFE82D909723E0A0EFAE0CC6E /* BonocleButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBE25C9913228466689DAD3B32C79EE /* BonocleButtons.swift */; };
-		51E76970828E3623D2AD20708D557085 /* HapticPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749EF8E42EEC5075C2ED0B223C469567 /* HapticPatterns.swift */; };
-		63AE57AB629DB489520736330EA46864 /* BonocleKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 61648D72C2131EEE5D5E17C5D472EB31 /* BonocleKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6BEC884ED138BEC33906DD71956A6567 /* BraillePatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666847E63A1B848826BA7A45BD70A5DC /* BraillePatterns.swift */; };
-		70FCB9CACC0865E288F343EC8650B265 /* BonocleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0EC93ECEAB778E6A5FDACFC9B6CB4 /* BonocleDelegate.swift */; };
-		712EC2355C13B2A13E2B1D81444A9068 /* BonocleServicesUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514122FA42B0503321922CA357C620A1 /* BonocleServicesUUID.swift */; };
-		71F0BD4A32FB18C00BFDF374A03506DA /* BluetoothState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CA3FF2AE89DEF28E78A843B1DAF97C /* BluetoothState.swift */; };
-		7624690DD7355AC09C1336F823FE8C01 /* BonocleCharacteristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3776BF848A8F72B430D5C0CBD21F5DE3 /* BonocleCharacteristic.swift */; };
-		7775A81ED7B349479DF2DD1E5ACF0EE2 /* HandPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82571E426827A8EF16839B72F5DCF6FF /* HandPreferences.swift */; };
-		7B3259C1EB9A6A919EDCE5D895EC19B6 /* Optical+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295AE4618DD7B51F6B5D498A50446D7 /* Optical+Events.swift */; };
-		85DCB8C037124A2096A17EE11A6DE590 /* UIViewController+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87971CE2808518F3C90A83FC11055E7 /* UIViewController+EXT.swift */; };
-		88B6F2B109FB80EA3908FFADC39A5207 /* Buttons+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB87D92879BA422572687A616EEF63 /* Buttons+Events.swift */; };
+		00219372188AF483162490FB23E6241A /* BluetoothState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC8F034FB90782AB1F79910CD3D6D97 /* BluetoothState.swift */; };
+		08E58BB3B397CDA4C64BD55F01B097AA /* String+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DD91181967E32E2E0C18BC90EAC7F /* String+EXT.swift */; };
+		0E39489F09AA341BF683EFC256F17B05 /* BonocleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B956E2C6D284ECEA10EA8D187FFC49BA /* BonocleDelegate.swift */; };
+		21A0DAEC8E6D72A4FEBBFB92C9520C25 /* BrailleMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD7A87EA66ABB9AE573D51F00DB2FF /* BrailleMapper.swift */; };
+		2245EDE1906A5BAA9A8E4826CFC31295 /* BonocleCommunicationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDB8A119E94C9899601E9595CD4A3DD /* BonocleCommunicationHelper.swift */; };
+		2C64D5BBBE5EA3E46477D1291A798790 /* BonocleCharacteristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FAE671E410FFD50AFCE185874A7AD3 /* BonocleCharacteristic.swift */; };
+		3B34222E7CAEB5433C25D2817C9D1C77 /* BonocleServicesUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460568EAAB32FCD7755B30FCC8739551 /* BonocleServicesUUID.swift */; };
+		5B6D7416077E47CCF202F49583485A29 /* BonocleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B09294676363CA04B7EC8D71CDCAC1A /* BonocleAPI.swift */; };
+		5CA0EAEF96E8A870BE1E7BA819060103 /* BonocleButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263D5606070129562BD74F3CA6061158 /* BonocleButtons.swift */; };
+		5EAE1766EA5150AD978C0BE07356036F /* BonocleModes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175FDFCA3206D4B4B365B7B61D6141EF /* BonocleModes.swift */; };
+		626345549A6C264D894970922A65F4C0 /* TableNamesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDF385F9D0884DD49414DC5262EDE1 /* TableNamesModel.swift */; };
+		69C76E5D3725CF44383ED4CE87D96A6F /* BonocleLang.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247E13F850041275CA25FE8F850475C /* BonocleLang.swift */; };
+		6C53868BE6C95E9C24803499EB57CEDD /* Data+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D189E0C1564A67492615B291075E68 /* Data+EXT.swift */; };
+		7C0307132BF185DD8575AD7BA90E6106 /* CoreBluetooth+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B522019D8417D9E4A834BFBC5FA63F2 /* CoreBluetooth+EXT.swift */; };
+		816562F119E279E58BB1F59F6DA94E0C /* BraillePatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B613CB1E17B72089446305359C34F /* BraillePatterns.swift */; };
+		84F1F8C15BB24F84830A091CBF82C4A1 /* OpticalSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE614E04494361EAB814F9B51DF5B0 /* OpticalSpacing.swift */; };
+		897F1168096C4A831C71B82119B18DE3 /* BonocleKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF8AB7344BE8840F50931E36D608AE6 /* BonocleKit-dummy.m */; };
 		959A0E98C977896BF1044057689EFCAE /* Pods-Memorize-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 495ED185BC4F7CAAE3B987A73E4F486E /* Pods-Memorize-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		97F75603C6A5A506D54194805009999D /* TableNamesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D83620665ADF9B0FE5A80C08BFDD81 /* TableNamesModel.swift */; };
-		A306DEA39C507063F24ADD679E7A6343 /* BonocleKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EA7079ECCBBCFBC39187D544DACA52 /* BonocleKit-dummy.m */; };
-		A30AB89705087954683FF77D4A13F98F /* ConversionToInt+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C54D0F934F6A0F10DC62D09D05941BE /* ConversionToInt+EXT.swift */; };
+		9B9797593F5AE062525E1D2BCEF5A1BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		A013D6719ADFBB947F989E1D5B1B48B1 /* Buttons+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2975C7874A1FE29BEE95223D749ECC39 /* Buttons+Events.swift */; };
 		A3DA89EF6B8A7420BC9B61459126024D /* Pods-Memorize-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6852BC39142DD24537C2FEB3CA8B1D0E /* Pods-Memorize-dummy.m */; };
-		A7BDAFF3F79BBFF98326765202BDB9D4 /* BrailleMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB57216A0BA3CAD483E01DC937D8C5 /* BrailleMapper.swift */; };
+		ABD200F861B20BE002412711B36A934F /* AutoScrollSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012E171439C4EED56B774FAC26BBD8A /* AutoScrollSpeed.swift */; };
+		B01EC72390692FF757A884A556CEB076 /* JSONParser+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153BFF332A84E58C2C5938A6AD1F27BC /* JSONParser+EXT.swift */; };
 		B206E8A98A2F39681EE6158BC6847779 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		B54133594B3D5ED30AE227F8CD41A2ED /* BonocleDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF8DE512F8AC6944FB4911A4AEEA109 /* BonocleDevice.swift */; };
-		BBE1431F7AEE99F4A4EC5B391652973D /* OpticalSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636683AAF3F718D315401CCA0B415C20 /* OpticalSpacing.swift */; };
-		C22BA949A72B2D300E9E094EC884623D /* Data+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66982006D7C9B17D5C47F7D41018A369 /* Data+EXT.swift */; };
-		D9512151DEDF1460D5F4C97040570C28 /* IMU+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D75D3AE1CE5C4C0D10A36934A38DD3A /* IMU+Events.swift */; };
-		E3BB0FC66D47E8565D50705FFE6A7259 /* TableNames.json in Resources */ = {isa = PBXBuildFile; fileRef = C63518F6D738958E8043CA133C93143A /* TableNames.json */; };
-		E667918E59FB571CAAC6CD666BB455BF /* BonocleKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BC0A2102879CEB6EB13A4A6EC4C3DE9 /* BonocleKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EDC60AA016CC05FEB91CDC6BB5B7C458 /* String+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDF351970726D95B5DD9FB17466766A /* String+EXT.swift */; };
-		FBE9F4FC85EFCFE3842AA64EF49B633E /* BonocleLang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE284E1A8879CD96B7E1577F6728EA /* BonocleLang.swift */; };
+		B3C87394AB8F7206A7DFE64CA08CEA66 /* HandPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598056EC1F80B4765102FCBB34AA2A0E /* HandPreferences.swift */; };
+		CAB99A112AA8BB19C0F9107ADEC4B2FA /* HapticPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84C0DB85D6D187406CF0BC237FECDF3 /* HapticPatterns.swift */; };
+		D92B338ED04FD1D58C101B8D37F5CE21 /* BonocleDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A9F34ABF3076809593DF083056763C /* BonocleDevice.swift */; };
+		DA45E436143B27884F9DF561EB379686 /* HapticMotors+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB37BCA47F558B9D776BE30C0A6D71 /* HapticMotors+Events.swift */; };
+		DFBF0A7CD14EB0F9CB983B3E75A21C57 /* BonocleKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19D9625E5346620CBFE277F096798CAE /* BonocleKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E116250143DB482BB6C087DAF15B16EA /* UIViewController+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB13A1DEADA16B986F266F929487AE6 /* UIViewController+EXT.swift */; };
+		E329E8090C26C0CB51978D5FE3CA0662 /* TableNames.json in Resources */ = {isa = PBXBuildFile; fileRef = B52F322F098480DF1AE3E40472A12AFE /* TableNames.json */; };
+		E8A999C98252AA7A8A4C9C33CE31AB34 /* ConversionToInt+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E0C2C643B1260A3F39333D52AD0A5D /* ConversionToInt+EXT.swift */; };
+		EAA6D20FB1D896065EC6B0997076D219 /* IMU+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D14BA33741C34AD6DC299D09070AA91 /* IMU+Events.swift */; };
+		F0BA4459AD4AD2D23C126F4E1B45BF7E /* BonocleKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D35E7BC0658C882DAA1E606BE98A1AB /* BonocleKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3D2B60B447B57B0E9C978266AE0EC1B /* HapticStrength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF4F0589E0A58EFC887AC11F609A5A /* HapticStrength.swift */; };
+		F47074AAE5DDC5ED7B8151648C1B4358 /* Optical+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492CFD2AE9D416BA565D7A39F40BF49E /* Optical+Events.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D6286BDF66948CDAC989D1041891872E /* PBXContainerItemProxy */ = {
+		7B7B4079B9F960002F2DF7BC0C373AD0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -55,63 +56,64 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05CB87D92879BA422572687A616EEF63 /* Buttons+Events.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Buttons+Events.swift"; path = "BonocleKit/Bonocle+Events/Buttons+Events.swift"; sourceTree = "<group>"; };
+		04A9F34ABF3076809593DF083056763C /* BonocleDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonocleDevice.swift; path = "BonocleKit/BonocleKit+Helper/BonocleDevice.swift"; sourceTree = "<group>"; };
+		05B3EC22CA3BF2F357907F9D10FF6312 /* BonocleKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BonocleKit.modulemap; sourceTree = "<group>"; };
+		0B09294676363CA04B7EC8D71CDCAC1A /* BonocleAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonocleAPI.swift; path = "BonocleKit/Bonocle+Enums/BonocleAPI.swift"; sourceTree = "<group>"; };
+		12DB37BCA47F558B9D776BE30C0A6D71 /* HapticMotors+Events.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HapticMotors+Events.swift"; path = "BonocleKit/Bonocle+Events/HapticMotors+Events.swift"; sourceTree = "<group>"; };
+		153BFF332A84E58C2C5938A6AD1F27BC /* JSONParser+EXT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JSONParser+EXT.swift"; path = "BonocleKit/Bonocle+Extensions/JSONParser+EXT.swift"; sourceTree = "<group>"; };
+		175FDFCA3206D4B4B365B7B61D6141EF /* BonocleModes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonocleModes.swift; path = "BonocleKit/Bonocle+Enums/BonocleModes.swift"; sourceTree = "<group>"; };
+		181B613CB1E17B72089446305359C34F /* BraillePatterns.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BraillePatterns.swift; path = "BonocleKit/Bonocle+Patterns/BraillePatterns.swift"; sourceTree = "<group>"; };
 		18AE8E3FB4B720B0F923FB91E476C46D /* Pods-Memorize.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Memorize.release.xcconfig"; sourceTree = "<group>"; };
-		1CF80A19E2172D2E57C487307B437583 /* HapticStrength.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HapticStrength.swift; path = "BonocleKit/Bonocle+Enums/HapticStrength.swift"; sourceTree = "<group>"; };
+		19D9625E5346620CBFE277F096798CAE /* BonocleKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BonocleKit-umbrella.h"; sourceTree = "<group>"; };
 		1FA71AD0EB7FE08285E4E3017C5DDAA3 /* Pods-Memorize.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Memorize.modulemap"; sourceTree = "<group>"; };
-		2C54D0F934F6A0F10DC62D09D05941BE /* ConversionToInt+EXT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConversionToInt+EXT.swift"; path = "BonocleKit/Bonocle+Extensions/ConversionToInt+EXT.swift"; sourceTree = "<group>"; };
-		33CA3FF2AE89DEF28E78A843B1DAF97C /* BluetoothState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BluetoothState.swift; path = "BonocleKit/Bonocle+Enums/BluetoothState.swift"; sourceTree = "<group>"; };
-		3776BF848A8F72B430D5C0CBD21F5DE3 /* BonocleCharacteristic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonocleCharacteristic.swift; path = "BonocleKit/Bonocle+Enums/BonocleCharacteristic.swift"; sourceTree = "<group>"; };
-		3A37132EE96D83BE072738517E812930 /* HapticMotors+Events.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HapticMotors+Events.swift"; path = "BonocleKit/Bonocle+Events/HapticMotors+Events.swift"; sourceTree = "<group>"; };
-		43AE284E1A8879CD96B7E1577F6728EA /* BonocleLang.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonocleLang.swift; path = "BonocleKit/Bonocle+Enums/BonocleLang.swift"; sourceTree = "<group>"; };
-		45D83620665ADF9B0FE5A80C08BFDD81 /* TableNamesModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableNamesModel.swift; path = "BonocleKit/BonocleKit+Helper/TableNamesModel.swift"; sourceTree = "<group>"; };
+		23D189E0C1564A67492615B291075E68 /* Data+EXT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+EXT.swift"; path = "BonocleKit/Bonocle+Extensions/Data+EXT.swift"; sourceTree = "<group>"; };
+		263D5606070129562BD74F3CA6061158 /* BonocleButtons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonocleButtons.swift; path = "BonocleKit/Bonocle+Events/BonocleButtons.swift"; sourceTree = "<group>"; };
+		2975C7874A1FE29BEE95223D749ECC39 /* Buttons+Events.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Buttons+Events.swift"; path = "BonocleKit/Bonocle+Events/Buttons+Events.swift"; sourceTree = "<group>"; };
+		35EE614E04494361EAB814F9B51DF5B0 /* OpticalSpacing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpticalSpacing.swift; path = "BonocleKit/Bonocle+Enums/OpticalSpacing.swift"; sourceTree = "<group>"; };
+		393DD91181967E32E2E0C18BC90EAC7F /* String+EXT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+EXT.swift"; path = "BonocleKit/Bonocle+Extensions/String+EXT.swift"; sourceTree = "<group>"; };
+		3B522019D8417D9E4A834BFBC5FA63F2 /* CoreBluetooth+EXT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CoreBluetooth+EXT.swift"; path = "BonocleKit/Bonocle+Extensions/CoreBluetooth+EXT.swift"; sourceTree = "<group>"; };
+		3D35E7BC0658C882DAA1E606BE98A1AB /* BonocleKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BonocleKit.h; path = "BonocleKit/Support Files/BonocleKit.h"; sourceTree = "<group>"; };
+		460568EAAB32FCD7755B30FCC8739551 /* BonocleServicesUUID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonocleServicesUUID.swift; path = "BonocleKit/BonocleKit+Helper/BonocleServicesUUID.swift"; sourceTree = "<group>"; };
+		46F370706190510823D01224E722CE4F /* BonocleKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BonocleKit-prefix.pch"; sourceTree = "<group>"; };
+		492CFD2AE9D416BA565D7A39F40BF49E /* Optical+Events.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Optical+Events.swift"; path = "BonocleKit/Bonocle+Events/Optical+Events.swift"; sourceTree = "<group>"; };
 		495ED185BC4F7CAAE3B987A73E4F486E /* Pods-Memorize-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Memorize-umbrella.h"; sourceTree = "<group>"; };
-		514122FA42B0503321922CA357C620A1 /* BonocleServicesUUID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonocleServicesUUID.swift; path = "BonocleKit/BonocleKit+Helper/BonocleServicesUUID.swift"; sourceTree = "<group>"; };
-		5F42F5E1A2CEDA3E5907ECE0B53DC191 /* BonocleModes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonocleModes.swift; path = "BonocleKit/Bonocle+Enums/BonocleModes.swift"; sourceTree = "<group>"; };
-		61648D72C2131EEE5D5E17C5D472EB31 /* BonocleKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BonocleKit.h; path = "BonocleKit/Support Files/BonocleKit.h"; sourceTree = "<group>"; };
-		636683AAF3F718D315401CCA0B415C20 /* OpticalSpacing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpticalSpacing.swift; path = "BonocleKit/Bonocle+Enums/OpticalSpacing.swift"; sourceTree = "<group>"; };
-		666847E63A1B848826BA7A45BD70A5DC /* BraillePatterns.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BraillePatterns.swift; path = "BonocleKit/Bonocle+Patterns/BraillePatterns.swift"; sourceTree = "<group>"; };
-		66982006D7C9B17D5C47F7D41018A369 /* Data+EXT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+EXT.swift"; path = "BonocleKit/Bonocle+Extensions/Data+EXT.swift"; sourceTree = "<group>"; };
+		598056EC1F80B4765102FCBB34AA2A0E /* HandPreferences.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandPreferences.swift; path = "BonocleKit/Bonocle+Events/HandPreferences.swift"; sourceTree = "<group>"; };
+		5DDB8A119E94C9899601E9595CD4A3DD /* BonocleCommunicationHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonocleCommunicationHelper.swift; path = "BonocleKit/BonocleKit+Helper/BonocleCommunicationHelper.swift"; sourceTree = "<group>"; };
 		66B4C7CE675B7B60DC47EF219BBC8A79 /* Pods-Memorize */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Memorize"; path = Pods_Memorize.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6852BC39142DD24537C2FEB3CA8B1D0E /* Pods-Memorize-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Memorize-dummy.m"; sourceTree = "<group>"; };
-		6D073CC31717784FA4A25CB4D3CD757C /* BonocleKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BonocleKit.debug.xcconfig; sourceTree = "<group>"; };
-		6D75D3AE1CE5C4C0D10A36934A38DD3A /* IMU+Events.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IMU+Events.swift"; path = "BonocleKit/Bonocle+Events/IMU+Events.swift"; sourceTree = "<group>"; };
+		6D14BA33741C34AD6DC299D09070AA91 /* IMU+Events.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IMU+Events.swift"; path = "BonocleKit/Bonocle+Events/IMU+Events.swift"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		749EF8E42EEC5075C2ED0B223C469567 /* HapticPatterns.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HapticPatterns.swift; path = "BonocleKit/Bonocle+Patterns/HapticPatterns.swift"; sourceTree = "<group>"; };
-		82571E426827A8EF16839B72F5DCF6FF /* HandPreferences.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandPreferences.swift; path = "BonocleKit/Bonocle+Events/HandPreferences.swift"; sourceTree = "<group>"; };
-		8BBE25C9913228466689DAD3B32C79EE /* BonocleButtons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonocleButtons.swift; path = "BonocleKit/Bonocle+Events/BonocleButtons.swift"; sourceTree = "<group>"; };
-		8BC0A2102879CEB6EB13A4A6EC4C3DE9 /* BonocleKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BonocleKit-umbrella.h"; sourceTree = "<group>"; };
+		77FF4F0589E0A58EFC887AC11F609A5A /* HapticStrength.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HapticStrength.swift; path = "BonocleKit/Bonocle+Enums/HapticStrength.swift"; sourceTree = "<group>"; };
+		7FF8AB7344BE8840F50931E36D608AE6 /* BonocleKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BonocleKit-dummy.m"; sourceTree = "<group>"; };
+		81C61333D188696C93DACF0D67FA1E3D /* BonocleKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BonocleKit.debug.xcconfig; sourceTree = "<group>"; };
+		8BFDF385F9D0884DD49414DC5262EDE1 /* TableNamesModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableNamesModel.swift; path = "BonocleKit/BonocleKit+Helper/TableNamesModel.swift"; sourceTree = "<group>"; };
 		8E2C9947E467A3153CD3FD816B25E584 /* BonocleKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BonocleKit; path = BonocleKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		91F37E2B6FE42D64EB1DCBE4363CBA1C /* BonocleKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BonocleKit-Info.plist"; sourceTree = "<group>"; };
-		9295AE4618DD7B51F6B5D498A50446D7 /* Optical+Events.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Optical+Events.swift"; path = "BonocleKit/Bonocle+Events/Optical+Events.swift"; sourceTree = "<group>"; };
-		99EA7079ECCBBCFBC39187D544DACA52 /* BonocleKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BonocleKit-dummy.m"; sourceTree = "<group>"; };
-		9AF8DE512F8AC6944FB4911A4AEEA109 /* BonocleDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonocleDevice.swift; path = "BonocleKit/BonocleKit+Helper/BonocleDevice.swift"; sourceTree = "<group>"; };
+		8FCD3FAE3A06FE55F117621B7214D2F6 /* BonocleKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BonocleKit-Info.plist"; sourceTree = "<group>"; };
+		9BB13A1DEADA16B986F266F929487AE6 /* UIViewController+EXT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+EXT.swift"; path = "BonocleKit/Bonocle+Extensions/UIViewController+EXT.swift"; sourceTree = "<group>"; };
+		9CC8F034FB90782AB1F79910CD3D6D97 /* BluetoothState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BluetoothState.swift; path = "BonocleKit/Bonocle+Enums/BluetoothState.swift"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EE0EC93ECEAB778E6A5FDACFC9B6CB4 /* BonocleDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonocleDelegate.swift; path = "BonocleKit/BonocleKit+Helper/BonocleDelegate.swift"; sourceTree = "<group>"; };
+		9E295129F44015F55BF055A37EBAE2BF /* BonocleKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BonocleKit.release.xcconfig; sourceTree = "<group>"; };
 		9FE0893AD6BE64FEC6FC581766E53BFA /* Pods-Memorize.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Memorize.debug.xcconfig"; sourceTree = "<group>"; };
-		A1CB57216A0BA3CAD483E01DC937D8C5 /* BrailleMapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrailleMapper.swift; path = "BonocleKit/BonocleKit+Helper/BrailleMapper.swift"; sourceTree = "<group>"; };
-		B2F09A1BD991C0421F9DD4701F8C04AC /* JSONParser+EXT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JSONParser+EXT.swift"; path = "BonocleKit/Bonocle+Extensions/JSONParser+EXT.swift"; sourceTree = "<group>"; };
-		B66AE535BC47B6E8BEEA1B0BA93DF5EE /* BonocleCommunicationHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonocleCommunicationHelper.swift; path = "BonocleKit/BonocleKit+Helper/BonocleCommunicationHelper.swift"; sourceTree = "<group>"; };
-		C63518F6D738958E8043CA133C93143A /* TableNames.json */ = {isa = PBXFileReference; includeInIndex = 1; name = TableNames.json; path = BonocleKit/Resources/TableNames.json; sourceTree = "<group>"; };
-		CBDF351970726D95B5DD9FB17466766A /* String+EXT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+EXT.swift"; path = "BonocleKit/Bonocle+Extensions/String+EXT.swift"; sourceTree = "<group>"; };
+		A0DD7A87EA66ABB9AE573D51F00DB2FF /* BrailleMapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrailleMapper.swift; path = "BonocleKit/BonocleKit+Helper/BrailleMapper.swift"; sourceTree = "<group>"; };
+		A0E0C2C643B1260A3F39333D52AD0A5D /* ConversionToInt+EXT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConversionToInt+EXT.swift"; path = "BonocleKit/Bonocle+Extensions/ConversionToInt+EXT.swift"; sourceTree = "<group>"; };
+		A247E13F850041275CA25FE8F850475C /* BonocleLang.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonocleLang.swift; path = "BonocleKit/Bonocle+Enums/BonocleLang.swift"; sourceTree = "<group>"; };
+		B012E171439C4EED56B774FAC26BBD8A /* AutoScrollSpeed.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoScrollSpeed.swift; path = "BonocleKit/Bonocle+Enums/AutoScrollSpeed.swift"; sourceTree = "<group>"; };
+		B0FAE671E410FFD50AFCE185874A7AD3 /* BonocleCharacteristic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonocleCharacteristic.swift; path = "BonocleKit/Bonocle+Enums/BonocleCharacteristic.swift"; sourceTree = "<group>"; };
+		B52F322F098480DF1AE3E40472A12AFE /* TableNames.json */ = {isa = PBXFileReference; includeInIndex = 1; name = TableNames.json; path = BonocleKit/Resources/TableNames.json; sourceTree = "<group>"; };
+		B956E2C6D284ECEA10EA8D187FFC49BA /* BonocleDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonocleDelegate.swift; path = "BonocleKit/BonocleKit+Helper/BonocleDelegate.swift"; sourceTree = "<group>"; };
 		DA31D896ECCDA24A90108DCCED6286CF /* Pods-Memorize-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Memorize-Info.plist"; sourceTree = "<group>"; };
-		DA3B74543156FFA86A58A0785A6F71A1 /* BonocleKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BonocleKit.modulemap; sourceTree = "<group>"; };
-		E19C5FDA957D4CFC87E73D28E4C4469D /* CoreBluetooth+EXT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CoreBluetooth+EXT.swift"; path = "BonocleKit/Bonocle+Extensions/CoreBluetooth+EXT.swift"; sourceTree = "<group>"; };
-		E53CF5A52D7C4A66D72DBAD78BD196B5 /* AutoScrollSpeed.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoScrollSpeed.swift; path = "BonocleKit/Bonocle+Enums/AutoScrollSpeed.swift"; sourceTree = "<group>"; };
 		EF3DFBAFA30010334CFD3C36015F6928 /* Pods-Memorize-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Memorize-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F517B26301A9026ED7572FB6C19DB719 /* Pods-Memorize-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Memorize-frameworks.sh"; sourceTree = "<group>"; };
-		F7AB15B4ADFB66661FBEDCD014D5B7D3 /* BonocleKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BonocleKit.release.xcconfig; sourceTree = "<group>"; };
-		F87971CE2808518F3C90A83FC11055E7 /* UIViewController+EXT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+EXT.swift"; path = "BonocleKit/Bonocle+Extensions/UIViewController+EXT.swift"; sourceTree = "<group>"; };
-		FB87D7AFB991478FD22B3DCA2E7726A1 /* BonocleKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BonocleKit-prefix.pch"; sourceTree = "<group>"; };
+		F84C0DB85D6D187406CF0BC237FECDF3 /* HapticPatterns.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HapticPatterns.swift; path = "BonocleKit/Bonocle+Patterns/HapticPatterns.swift"; sourceTree = "<group>"; };
 		FE18B3BE53E6A93B645E147F167A6942 /* Pods-Memorize-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Memorize-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CAAC408FED807B1E731C3318A627815D /* Frameworks */ = {
+		2D3838D5B04F32E422F1DC06A2FAE33F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1754E3732517F7844B272F92A1F7EFE9 /* Foundation.framework in Frameworks */,
+				9B9797593F5AE062525E1D2BCEF5A1BB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,39 +128,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		17100CD26C9244C17BA26D8DA1DE4949 /* BonocleKit */ = {
+		1E844FAB779E4EB7450DAAE2FAD8357A /* BonocleKit */ = {
 			isa = PBXGroup;
 			children = (
-				E53CF5A52D7C4A66D72DBAD78BD196B5 /* AutoScrollSpeed.swift */,
-				33CA3FF2AE89DEF28E78A843B1DAF97C /* BluetoothState.swift */,
-				8BBE25C9913228466689DAD3B32C79EE /* BonocleButtons.swift */,
-				3776BF848A8F72B430D5C0CBD21F5DE3 /* BonocleCharacteristic.swift */,
-				B66AE535BC47B6E8BEEA1B0BA93DF5EE /* BonocleCommunicationHelper.swift */,
-				9EE0EC93ECEAB778E6A5FDACFC9B6CB4 /* BonocleDelegate.swift */,
-				9AF8DE512F8AC6944FB4911A4AEEA109 /* BonocleDevice.swift */,
-				61648D72C2131EEE5D5E17C5D472EB31 /* BonocleKit.h */,
-				43AE284E1A8879CD96B7E1577F6728EA /* BonocleLang.swift */,
-				5F42F5E1A2CEDA3E5907ECE0B53DC191 /* BonocleModes.swift */,
-				514122FA42B0503321922CA357C620A1 /* BonocleServicesUUID.swift */,
-				A1CB57216A0BA3CAD483E01DC937D8C5 /* BrailleMapper.swift */,
-				666847E63A1B848826BA7A45BD70A5DC /* BraillePatterns.swift */,
-				05CB87D92879BA422572687A616EEF63 /* Buttons+Events.swift */,
-				2C54D0F934F6A0F10DC62D09D05941BE /* ConversionToInt+EXT.swift */,
-				E19C5FDA957D4CFC87E73D28E4C4469D /* CoreBluetooth+EXT.swift */,
-				66982006D7C9B17D5C47F7D41018A369 /* Data+EXT.swift */,
-				82571E426827A8EF16839B72F5DCF6FF /* HandPreferences.swift */,
-				3A37132EE96D83BE072738517E812930 /* HapticMotors+Events.swift */,
-				749EF8E42EEC5075C2ED0B223C469567 /* HapticPatterns.swift */,
-				1CF80A19E2172D2E57C487307B437583 /* HapticStrength.swift */,
-				6D75D3AE1CE5C4C0D10A36934A38DD3A /* IMU+Events.swift */,
-				B2F09A1BD991C0421F9DD4701F8C04AC /* JSONParser+EXT.swift */,
-				9295AE4618DD7B51F6B5D498A50446D7 /* Optical+Events.swift */,
-				636683AAF3F718D315401CCA0B415C20 /* OpticalSpacing.swift */,
-				CBDF351970726D95B5DD9FB17466766A /* String+EXT.swift */,
-				45D83620665ADF9B0FE5A80C08BFDD81 /* TableNamesModel.swift */,
-				F87971CE2808518F3C90A83FC11055E7 /* UIViewController+EXT.swift */,
-				5D95348F718C0784A749B4084683B561 /* Resources */,
-				BEDC28458D2BCFC40763A72B143745C3 /* Support Files */,
+				B012E171439C4EED56B774FAC26BBD8A /* AutoScrollSpeed.swift */,
+				9CC8F034FB90782AB1F79910CD3D6D97 /* BluetoothState.swift */,
+				0B09294676363CA04B7EC8D71CDCAC1A /* BonocleAPI.swift */,
+				263D5606070129562BD74F3CA6061158 /* BonocleButtons.swift */,
+				B0FAE671E410FFD50AFCE185874A7AD3 /* BonocleCharacteristic.swift */,
+				5DDB8A119E94C9899601E9595CD4A3DD /* BonocleCommunicationHelper.swift */,
+				B956E2C6D284ECEA10EA8D187FFC49BA /* BonocleDelegate.swift */,
+				04A9F34ABF3076809593DF083056763C /* BonocleDevice.swift */,
+				3D35E7BC0658C882DAA1E606BE98A1AB /* BonocleKit.h */,
+				A247E13F850041275CA25FE8F850475C /* BonocleLang.swift */,
+				175FDFCA3206D4B4B365B7B61D6141EF /* BonocleModes.swift */,
+				460568EAAB32FCD7755B30FCC8739551 /* BonocleServicesUUID.swift */,
+				A0DD7A87EA66ABB9AE573D51F00DB2FF /* BrailleMapper.swift */,
+				181B613CB1E17B72089446305359C34F /* BraillePatterns.swift */,
+				2975C7874A1FE29BEE95223D749ECC39 /* Buttons+Events.swift */,
+				A0E0C2C643B1260A3F39333D52AD0A5D /* ConversionToInt+EXT.swift */,
+				3B522019D8417D9E4A834BFBC5FA63F2 /* CoreBluetooth+EXT.swift */,
+				23D189E0C1564A67492615B291075E68 /* Data+EXT.swift */,
+				598056EC1F80B4765102FCBB34AA2A0E /* HandPreferences.swift */,
+				12DB37BCA47F558B9D776BE30C0A6D71 /* HapticMotors+Events.swift */,
+				F84C0DB85D6D187406CF0BC237FECDF3 /* HapticPatterns.swift */,
+				77FF4F0589E0A58EFC887AC11F609A5A /* HapticStrength.swift */,
+				6D14BA33741C34AD6DC299D09070AA91 /* IMU+Events.swift */,
+				153BFF332A84E58C2C5938A6AD1F27BC /* JSONParser+EXT.swift */,
+				492CFD2AE9D416BA565D7A39F40BF49E /* Optical+Events.swift */,
+				35EE614E04494361EAB814F9B51DF5B0 /* OpticalSpacing.swift */,
+				393DD91181967E32E2E0C18BC90EAC7F /* String+EXT.swift */,
+				8BFDF385F9D0884DD49414DC5262EDE1 /* TableNamesModel.swift */,
+				9BB13A1DEADA16B986F266F929487AE6 /* UIViewController+EXT.swift */,
+				BD50D479A017922BD03747514EF2DE58 /* Resources */,
+				C6681DC9160B44DE7D659084D0DC177C /* Support Files */,
 			);
 			name = BonocleKit;
 			path = BonocleKit;
@@ -171,6 +174,14 @@
 				66B4C7CE675B7B60DC47EF219BBC8A79 /* Pods-Memorize */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3E693E2037830A0670DA38B0E1614B45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E844FAB779E4EB7450DAAE2FAD8357A /* BonocleKit */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		502F5FDE9833E48F338570F452F1F865 /* Pods-Memorize */ = {
@@ -198,22 +209,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5D95348F718C0784A749B4084683B561 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C63518F6D738958E8043CA133C93143A /* TableNames.json */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		84C50691E6C7DA422DD9B3119D177FC9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				17100CD26C9244C17BA26D8DA1DE4949 /* BonocleKit */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		9E7FA05EEE34999C4D8BCD36DD834806 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,16 +217,24 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		BEDC28458D2BCFC40763A72B143745C3 /* Support Files */ = {
+		BD50D479A017922BD03747514EF2DE58 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DA3B74543156FFA86A58A0785A6F71A1 /* BonocleKit.modulemap */,
-				99EA7079ECCBBCFBC39187D544DACA52 /* BonocleKit-dummy.m */,
-				91F37E2B6FE42D64EB1DCBE4363CBA1C /* BonocleKit-Info.plist */,
-				FB87D7AFB991478FD22B3DCA2E7726A1 /* BonocleKit-prefix.pch */,
-				8BC0A2102879CEB6EB13A4A6EC4C3DE9 /* BonocleKit-umbrella.h */,
-				6D073CC31717784FA4A25CB4D3CD757C /* BonocleKit.debug.xcconfig */,
-				F7AB15B4ADFB66661FBEDCD014D5B7D3 /* BonocleKit.release.xcconfig */,
+				B52F322F098480DF1AE3E40472A12AFE /* TableNames.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C6681DC9160B44DE7D659084D0DC177C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				05B3EC22CA3BF2F357907F9D10FF6312 /* BonocleKit.modulemap */,
+				7FF8AB7344BE8840F50931E36D608AE6 /* BonocleKit-dummy.m */,
+				8FCD3FAE3A06FE55F117621B7214D2F6 /* BonocleKit-Info.plist */,
+				46F370706190510823D01224E722CE4F /* BonocleKit-prefix.pch */,
+				19D9625E5346620CBFE277F096798CAE /* BonocleKit-umbrella.h */,
+				81C61333D188696C93DACF0D67FA1E3D /* BonocleKit.debug.xcconfig */,
+				9E295129F44015F55BF055A37EBAE2BF /* BonocleKit.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/BonocleKit";
@@ -242,7 +245,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				84C50691E6C7DA422DD9B3119D177FC9 /* Pods */,
+				3E693E2037830A0670DA38B0E1614B45 /* Pods */,
 				30D7B5DBCFD4997012EB3F67621298F3 /* Products */,
 				9E7FA05EEE34999C4D8BCD36DD834806 /* Targets Support Files */,
 			);
@@ -259,12 +262,12 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		E784B4B20C73E1EE74281E77A677242C /* Headers */ = {
+		538FA817AC8957602BAAD545A888A97F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63AE57AB629DB489520736330EA46864 /* BonocleKit.h in Headers */,
-				E667918E59FB571CAAC6CD666BB455BF /* BonocleKit-umbrella.h in Headers */,
+				F0BA4459AD4AD2D23C126F4E1B45BF7E /* BonocleKit.h in Headers */,
+				DFBF0A7CD14EB0F9CB983B3E75A21C57 /* BonocleKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,12 +284,12 @@
 /* Begin PBXNativeTarget section */
 		5D0D8266528A460CA0DEA095F1705D62 /* BonocleKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B522EFF87E9D8B12A74AD0750A7C659 /* Build configuration list for PBXNativeTarget "BonocleKit" */;
+			buildConfigurationList = 8083708D125AA3817960D91957A1A443 /* Build configuration list for PBXNativeTarget "BonocleKit" */;
 			buildPhases = (
-				E784B4B20C73E1EE74281E77A677242C /* Headers */,
-				BE36AACD32F2309D01E270FB72D99BA3 /* Sources */,
-				CAAC408FED807B1E731C3318A627815D /* Frameworks */,
-				3EB4E843DFC67ABA3008F1AD2C9C126C /* Resources */,
+				538FA817AC8957602BAAD545A888A97F /* Headers */,
+				4C3F0018715ED49F5391D4B06C265C5A /* Sources */,
+				2D3838D5B04F32E422F1DC06A2FAE33F /* Frameworks */,
+				9FD66728CAC2C15558ADC9C4A08E5BCB /* Resources */,
 			);
 			buildRules = (
 			);
@@ -309,7 +312,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				4554A5B7E7975A30F804907BEF1A0B4C /* PBXTargetDependency */,
+				4AC6CBDFD681DCE61899F939C3DCFD55 /* PBXTargetDependency */,
 			);
 			name = "Pods-Memorize";
 			productName = Pods_Memorize;
@@ -326,7 +329,7 @@
 				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -345,11 +348,11 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3EB4E843DFC67ABA3008F1AD2C9C126C /* Resources */ = {
+		9FD66728CAC2C15558ADC9C4A08E5BCB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3BB0FC66D47E8565D50705FFE6A7259 /* TableNames.json in Resources */,
+				E329E8090C26C0CB51978D5FE3CA0662 /* TableNames.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,38 +366,39 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BE36AACD32F2309D01E270FB72D99BA3 /* Sources */ = {
+		4C3F0018715ED49F5391D4B06C265C5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				250F27EF6910E6A9534B413DB48C63BE /* AutoScrollSpeed.swift in Sources */,
-				71F0BD4A32FB18C00BFDF374A03506DA /* BluetoothState.swift in Sources */,
-				51436C3CFE82D909723E0A0EFAE0CC6E /* BonocleButtons.swift in Sources */,
-				7624690DD7355AC09C1336F823FE8C01 /* BonocleCharacteristic.swift in Sources */,
-				3C747754294AE91F1F51E059F571B9B0 /* BonocleCommunicationHelper.swift in Sources */,
-				70FCB9CACC0865E288F343EC8650B265 /* BonocleDelegate.swift in Sources */,
-				B54133594B3D5ED30AE227F8CD41A2ED /* BonocleDevice.swift in Sources */,
-				A306DEA39C507063F24ADD679E7A6343 /* BonocleKit-dummy.m in Sources */,
-				FBE9F4FC85EFCFE3842AA64EF49B633E /* BonocleLang.swift in Sources */,
-				1FE17EAB228AE6AA2A57B25F1D0A2067 /* BonocleModes.swift in Sources */,
-				712EC2355C13B2A13E2B1D81444A9068 /* BonocleServicesUUID.swift in Sources */,
-				A7BDAFF3F79BBFF98326765202BDB9D4 /* BrailleMapper.swift in Sources */,
-				6BEC884ED138BEC33906DD71956A6567 /* BraillePatterns.swift in Sources */,
-				88B6F2B109FB80EA3908FFADC39A5207 /* Buttons+Events.swift in Sources */,
-				A30AB89705087954683FF77D4A13F98F /* ConversionToInt+EXT.swift in Sources */,
-				4CE35C9D2665DCB60D8329C7A7DB2911 /* CoreBluetooth+EXT.swift in Sources */,
-				C22BA949A72B2D300E9E094EC884623D /* Data+EXT.swift in Sources */,
-				7775A81ED7B349479DF2DD1E5ACF0EE2 /* HandPreferences.swift in Sources */,
-				41611785F7E0F95484845CF1F79931A2 /* HapticMotors+Events.swift in Sources */,
-				51E76970828E3623D2AD20708D557085 /* HapticPatterns.swift in Sources */,
-				48941C3601FA75A74100ED5483A9F074 /* HapticStrength.swift in Sources */,
-				D9512151DEDF1460D5F4C97040570C28 /* IMU+Events.swift in Sources */,
-				456E77C8135C384892FED03FC0098111 /* JSONParser+EXT.swift in Sources */,
-				7B3259C1EB9A6A919EDCE5D895EC19B6 /* Optical+Events.swift in Sources */,
-				BBE1431F7AEE99F4A4EC5B391652973D /* OpticalSpacing.swift in Sources */,
-				EDC60AA016CC05FEB91CDC6BB5B7C458 /* String+EXT.swift in Sources */,
-				97F75603C6A5A506D54194805009999D /* TableNamesModel.swift in Sources */,
-				85DCB8C037124A2096A17EE11A6DE590 /* UIViewController+EXT.swift in Sources */,
+				ABD200F861B20BE002412711B36A934F /* AutoScrollSpeed.swift in Sources */,
+				00219372188AF483162490FB23E6241A /* BluetoothState.swift in Sources */,
+				5B6D7416077E47CCF202F49583485A29 /* BonocleAPI.swift in Sources */,
+				5CA0EAEF96E8A870BE1E7BA819060103 /* BonocleButtons.swift in Sources */,
+				2C64D5BBBE5EA3E46477D1291A798790 /* BonocleCharacteristic.swift in Sources */,
+				2245EDE1906A5BAA9A8E4826CFC31295 /* BonocleCommunicationHelper.swift in Sources */,
+				0E39489F09AA341BF683EFC256F17B05 /* BonocleDelegate.swift in Sources */,
+				D92B338ED04FD1D58C101B8D37F5CE21 /* BonocleDevice.swift in Sources */,
+				897F1168096C4A831C71B82119B18DE3 /* BonocleKit-dummy.m in Sources */,
+				69C76E5D3725CF44383ED4CE87D96A6F /* BonocleLang.swift in Sources */,
+				5EAE1766EA5150AD978C0BE07356036F /* BonocleModes.swift in Sources */,
+				3B34222E7CAEB5433C25D2817C9D1C77 /* BonocleServicesUUID.swift in Sources */,
+				21A0DAEC8E6D72A4FEBBFB92C9520C25 /* BrailleMapper.swift in Sources */,
+				816562F119E279E58BB1F59F6DA94E0C /* BraillePatterns.swift in Sources */,
+				A013D6719ADFBB947F989E1D5B1B48B1 /* Buttons+Events.swift in Sources */,
+				E8A999C98252AA7A8A4C9C33CE31AB34 /* ConversionToInt+EXT.swift in Sources */,
+				7C0307132BF185DD8575AD7BA90E6106 /* CoreBluetooth+EXT.swift in Sources */,
+				6C53868BE6C95E9C24803499EB57CEDD /* Data+EXT.swift in Sources */,
+				B3C87394AB8F7206A7DFE64CA08CEA66 /* HandPreferences.swift in Sources */,
+				DA45E436143B27884F9DF561EB379686 /* HapticMotors+Events.swift in Sources */,
+				CAB99A112AA8BB19C0F9107ADEC4B2FA /* HapticPatterns.swift in Sources */,
+				F3D2B60B447B57B0E9C978266AE0EC1B /* HapticStrength.swift in Sources */,
+				EAA6D20FB1D896065EC6B0997076D219 /* IMU+Events.swift in Sources */,
+				B01EC72390692FF757A884A556CEB076 /* JSONParser+EXT.swift in Sources */,
+				F47074AAE5DDC5ED7B8151648C1B4358 /* Optical+Events.swift in Sources */,
+				84F1F8C15BB24F84830A091CBF82C4A1 /* OpticalSpacing.swift in Sources */,
+				08E58BB3B397CDA4C64BD55F01B097AA /* String+EXT.swift in Sources */,
+				626345549A6C264D894970922A65F4C0 /* TableNamesModel.swift in Sources */,
+				E116250143DB482BB6C087DAF15B16EA /* UIViewController+EXT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,11 +413,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4554A5B7E7975A30F804907BEF1A0B4C /* PBXTargetDependency */ = {
+		4AC6CBDFD681DCE61899F939C3DCFD55 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BonocleKit;
 			target = 5D0D8266528A460CA0DEA095F1705D62 /* BonocleKit */;
-			targetProxy = D6286BDF66948CDAC989D1041891872E /* PBXContainerItemProxy */;
+			targetProxy = 7B7B4079B9F960002F2DF7BC0C373AD0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -522,6 +526,41 @@
 			};
 			name = Debug;
 		};
+		70689885B7A04F1C6D9E94D860433313 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81C61333D188696C93DACF0D67FA1E3D /* BonocleKit.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BonocleKit/BonocleKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BonocleKit/BonocleKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BonocleKit/BonocleKit.modulemap";
+				PRODUCT_MODULE_NAME = BonocleKit;
+				PRODUCT_NAME = BonocleKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		7C15EE59573BF344766A495CAD7DC731 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9FE0893AD6BE64FEC6FC581766E53BFA /* Pods-Memorize.debug.xcconfig */;
@@ -621,9 +660,9 @@
 			};
 			name = Release;
 		};
-		C6AAC85F6FD4707625891D4DAA8AB33D /* Release */ = {
+		E913FD654CA63FEBD55CA84475BAB572 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7AB15B4ADFB66661FBEDCD014D5B7D3 /* BonocleKit.release.xcconfig */;
+			baseConfigurationReference = 9E295129F44015F55BF055A37EBAE2BF /* BonocleKit.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -657,58 +696,23 @@
 			};
 			name = Release;
 		};
-		E30A8ED92650F1593912EC544A14E8D3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D073CC31717784FA4A25CB4D3CD757C /* BonocleKit.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BonocleKit/BonocleKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BonocleKit/BonocleKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/BonocleKit/BonocleKit.modulemap";
-				PRODUCT_MODULE_NAME = BonocleKit;
-				PRODUCT_NAME = BonocleKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0B522EFF87E9D8B12A74AD0750A7C659 /* Build configuration list for PBXNativeTarget "BonocleKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E30A8ED92650F1593912EC544A14E8D3 /* Debug */,
-				C6AAC85F6FD4707625891D4DAA8AB33D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4BC7450F9457737EE3E637BA155B56F7 /* Debug */,
 				8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8083708D125AA3817960D91957A1A443 /* Build configuration list for PBXNativeTarget "BonocleKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70689885B7A04F1C6D9E94D860433313 /* Debug */,
+				E913FD654CA63FEBD55CA84475BAB572 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

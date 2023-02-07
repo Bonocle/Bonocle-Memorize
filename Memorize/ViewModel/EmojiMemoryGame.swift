@@ -10,6 +10,8 @@ import CoreBluetooth
 
 class EmojiMemoryGame: ObservableObject {
     @Published private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
+    @Published var bonocleNameLabel: String = "Bonocle not connected"
+    @Published var statusView: Color = .red
     @Published private var currentIndex = 0
 
     var peripheral: BonocleDevice? = nil
@@ -18,15 +20,54 @@ class EmojiMemoryGame: ObservableObject {
     init() {
         BonocleCommunicationHelper.shared.setOpticalSubscription(peripheral: nil, to: true)
         BonocleCommunicationHelper.shared.setIMUSubscription(peripheral: nil, to: false)
+        configPeripheral()
 
+        addObserver()
+        
+    }
+    
+    func configPeripheral() {
+        if let peripheral = BonocleCommunicationHelper.shared.connectedBonocle.peripheral {
+            if peripheral.identifier.uuidString == UserPrefrences.shared.deviceConfiguration?.UUID?.uuidString {
+            BonocleCommunicationHelper.shared.connectToDevice(device: peripheral)
+            }
+        }
         BonocleCommunicationHelper.shared.deviceDelegate = self
+        
+            
+        if let peripheral = peripheral, let deviceConfiguration = UserPrefrences.shared.deviceConfiguration {
+            BonocleCommunicationHelper.shared.updateOpticalSpacing(peripheral: peripheral, x_spacing: 40, y_spacing: 120)
         BonocleCommunicationHelper.shared.searchForBonocle()
+        }
+    }
+    
+    func addObserver(){
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleDeviceState(notification:)), name: Notification.Name("DeviceStateNotification"), object: nil)
+
+    }
+
+    @objc func handleDeviceState(notification: Notification) {
+        deviceState()
+    }
+    
+    func deviceState(){
+        if BonocleCommunicationHelper.shared.connectedDevicesCount >= 1{
+            statusView = .green
+            bonocleNameLabel = "\(BonocleCommunicationHelper.shared.connectedDevicesCount)" + NSLocalizedString("bonocle_status_connected", comment: "")
+        }else{
+            deviceStateOFF()
+        }
+    }
+    
+    func deviceStateOFF(){
+        statusView = .red
+        bonocleNameLabel = "\(BonocleCommunicationHelper.shared.connectedDevicesCount)" + NSLocalizedString("bonocle_status_disconnected", comment: "")
     }
 
     static func createMemoryGame() -> MemoryGame<String> {
         let emojis = ["🇶🇦", "🇪🇬", "🇸🇦", "🇦🇪", "🇰🇼", "🇸🇩", "🇧🇭", "🇴🇲"].shuffled()
 
-        return MemoryGame<String>(numberOfPairsOfCards: Int.random(in: 2...5)) { index in
+        return MemoryGame<String>(numberOfPairsOfCards: Int.random(in: 2...4)) { index in
             return emojis[index]
         }
     }
@@ -40,6 +81,11 @@ class EmojiMemoryGame: ObservableObject {
     
     func choose(card: MemoryGame<String>.Card) {
         model.choose(card: card)
+        
+        
+        if cards.allSatisfy({ $0.isMatched == true }) {
+            resetGame()
+        }
     }
     
     func resetGame() {
@@ -114,11 +160,16 @@ extension EmojiMemoryGame: BonocleDelegate {
     func foundDevices(peripherals: [BonocleDevice]) {
         if peripherals.count > 0 {
             for peripheral in peripherals {
+                if peripheral.UUID?.uuidString ?? "" == UserPrefrences.shared.deviceConfiguration?.peripheral?.identifier.uuidString ?? "" {
                     self.peripheral = peripheral
                     BonocleCommunicationHelper.shared.connectToDevice(device: (self.peripheral?.peripheral)!)
-            }
+                    statusView = .green
+                    bonocleNameLabel = "\(BonocleCommunicationHelper.shared.connectedDevicesCount)" + NSLocalizedString("bonocle_status_connected", comment: "")
+                }
                 
+            }
         }
+      
     }
     
     func opticalEvent(peripheral: BonocleDevice, x: Int, y: Int) {
@@ -146,6 +197,8 @@ extension EmojiMemoryGame: BonocleDelegate {
         switch event {
         case .singleClick:
             switch button {
+            case .action:
+                resetGame()
             case .middle:
                 if currentIndex >= 0, currentIndex < model.cards.count {
                     let card = model.cards[currentIndex]
@@ -156,6 +209,16 @@ extension EmojiMemoryGame: BonocleDelegate {
 
         default:
             break
+        }
+    }
+    
+    func centralManagerState(state: BluetoothState) {
+        if state == .PowerdON {
+            if let bonocle = UserPrefrences.shared.deviceConfiguration {
+                BonocleCommunicationHelper.shared.searchForBonocle(bonocle: bonocle)
+            } else {
+                BonocleCommunicationHelper.shared.searchForBonocle()
+            }
         }
     }
 

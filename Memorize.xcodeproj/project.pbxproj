@@ -7,7 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2752920E2977FBC0002250B7 /* BonocleStatusCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = 275292032977FBC0002250B7 /* BonocleStatusCell.strings */; };
+		2752920F2977FBC0002250B7 /* BonocleStatus.strings in Resources */ = {isa = PBXBuildFile; fileRef = 275292052977FBC0002250B7 /* BonocleStatus.strings */; };
+		275292102977FBC0002250B7 /* BonocleStatusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275292072977FBC0002250B7 /* BonocleStatusService.swift */; };
+		275292112977FBC0002250B7 /* BonocleStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275292082977FBC0002250B7 /* BonocleStatusCell.swift */; };
+		275292122977FBC0002250B7 /* BonocleStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 275292092977FBC0002250B7 /* BonocleStatus.storyboard */; };
+		275292132977FBC0002250B7 /* BonocleStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2752920B2977FBC0002250B7 /* BonocleStatusCell.xib */; };
+		275292142977FBC0002250B7 /* BonocleStatusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2752920D2977FBC0002250B7 /* BonocleStatusVC.swift */; };
+		2752921A297805DA002250B7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27529217297805D9002250B7 /* Localizable.strings */; };
+		2752921C29780667002250B7 /* UserPrefrences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2752921B29780667002250B7 /* UserPrefrences.swift */; };
 		27B6219A28D8A542001BEF2A /* TextToSpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6219928D8A542001BEF2A /* TextToSpeechManager.swift */; };
+		27B636D5298A989D00A2FD74 /* Sigma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B636D4298A989D00A2FD74 /* Sigma.swift */; };
 		C55338CCA95F9705D0F2FC8E /* Pods_Memorize.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3509609DD53E0E545D553DAE /* Pods_Memorize.framework */; };
 		E935D77926359BC8001DC2BD /* MemorizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E935D77826359BC8001DC2BD /* MemorizeApp.swift */; };
 		E935D77B26359BC8001DC2BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E935D77A26359BC8001DC2BD /* ContentView.swift */; };
@@ -22,7 +32,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		275292042977FBC0002250B7 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/BonocleStatusCell.strings; sourceTree = "<group>"; };
+		275292062977FBC0002250B7 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/BonocleStatus.strings; sourceTree = "<group>"; };
+		275292072977FBC0002250B7 /* BonocleStatusService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonocleStatusService.swift; sourceTree = "<group>"; };
+		275292082977FBC0002250B7 /* BonocleStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonocleStatusCell.swift; sourceTree = "<group>"; };
+		2752920A2977FBC0002250B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BonocleStatus.storyboard; sourceTree = "<group>"; };
+		2752920C2977FBC0002250B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BonocleStatusCell.xib; sourceTree = "<group>"; };
+		2752920D2977FBC0002250B7 /* BonocleStatusVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonocleStatusVC.swift; sourceTree = "<group>"; };
+		27529218297805D9002250B7 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		27529219297805D9002250B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2752921B29780667002250B7 /* UserPrefrences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPrefrences.swift; sourceTree = "<group>"; };
+		2752921D297810CA002250B7 /* Memorize.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Memorize.entitlements; sourceTree = "<group>"; };
 		27B6219928D8A542001BEF2A /* TextToSpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechManager.swift; sourceTree = "<group>"; };
+		27B636D4298A989D00A2FD74 /* Sigma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sigma.swift; sourceTree = "<group>"; };
 		32218164ADD224C368412890 /* Pods-Memorize.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memorize.release.xcconfig"; path = "Target Support Files/Pods-Memorize/Pods-Memorize.release.xcconfig"; sourceTree = "<group>"; };
 		3509609DD53E0E545D553DAE /* Pods_Memorize.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memorize.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		687093CF95B5BF937709A798 /* Pods-Memorize.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memorize.debug.xcconfig"; path = "Target Support Files/Pods-Memorize/Pods-Memorize.debug.xcconfig"; sourceTree = "<group>"; };
@@ -52,6 +74,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		275292012977FBC0002250B7 /* CustomLayout */ = {
+			isa = PBXGroup;
+			children = (
+				275292022977FBC0002250B7 /* BonocleStatusView */,
+			);
+			path = CustomLayout;
+			sourceTree = "<group>";
+		};
+		275292022977FBC0002250B7 /* BonocleStatusView */ = {
+			isa = PBXGroup;
+			children = (
+				275292032977FBC0002250B7 /* BonocleStatusCell.strings */,
+				275292052977FBC0002250B7 /* BonocleStatus.strings */,
+				275292072977FBC0002250B7 /* BonocleStatusService.swift */,
+				275292082977FBC0002250B7 /* BonocleStatusCell.swift */,
+				275292092977FBC0002250B7 /* BonocleStatus.storyboard */,
+				2752920B2977FBC0002250B7 /* BonocleStatusCell.xib */,
+				2752920D2977FBC0002250B7 /* BonocleStatusVC.swift */,
+			);
+			path = BonocleStatusView;
+			sourceTree = "<group>";
+		};
+		27529215297805BF002250B7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2752921B29780667002250B7 /* UserPrefrences.swift */,
+				27529216297805D9002250B7 /* Localization */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		27529216297805D9002250B7 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				27529217297805D9002250B7 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		D00FBB9E2D49B77576D7BBED /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +151,9 @@
 		E935D77726359BC8001DC2BD /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
+				2752921D297810CA002250B7 /* Memorize.entitlements */,
+				27529215297805BF002250B7 /* Utilities */,
+				275292012977FBC0002250B7 /* CustomLayout */,
 				E935D77826359BC8001DC2BD /* MemorizeApp.swift */,
 				E9A6462B263943E100733793 /* View */,
 				E9A6462D263943EF00733793 /* Model */,
@@ -114,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				E935D77A26359BC8001DC2BD /* ContentView.swift */,
+				27B636D4298A989D00A2FD74 /* Sigma.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,6 +254,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = E935D76C26359BC8001DC2BD;
 			productRefGroup = E935D77626359BC8001DC2BD /* Products */;
@@ -205,8 +271,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2752920E2977FBC0002250B7 /* BonocleStatusCell.strings in Resources */,
 				E935D78026359BC8001DC2BD /* Preview Assets.xcassets in Resources */,
+				275292122977FBC0002250B7 /* BonocleStatus.storyboard in Resources */,
+				2752921A297805DA002250B7 /* Localizable.strings in Resources */,
 				E935D77D26359BC8001DC2BD /* Assets.xcassets in Resources */,
+				275292132977FBC0002250B7 /* BonocleStatusCell.xib in Resources */,
+				2752920F2977FBC0002250B7 /* BonocleStatus.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,18 +331,67 @@
 			buildActionMask = 2147483647;
 			files = (
 				27B6219A28D8A542001BEF2A /* TextToSpeechManager.swift in Sources */,
+				27B636D5298A989D00A2FD74 /* Sigma.swift in Sources */,
 				E99B79302639C87400A94CC9 /* Pie.swift in Sources */,
 				E935D7892635A215001DC2BD /* MemoryGame.swift in Sources */,
+				2752921C29780667002250B7 /* UserPrefrences.swift in Sources */,
+				275292142977FBC0002250B7 /* BonocleStatusVC.swift in Sources */,
 				E935D77B26359BC8001DC2BD /* ContentView.swift in Sources */,
 				E9D3D596263D359C0032554F /* Grid.swift in Sources */,
+				275292112977FBC0002250B7 /* BonocleStatusCell.swift in Sources */,
 				E935D77926359BC8001DC2BD /* MemorizeApp.swift in Sources */,
 				E99B792D2639C22100A94CC9 /* Cardify.swift in Sources */,
 				E9D3D593263D35320032554F /* GridLayout.swift in Sources */,
+				275292102977FBC0002250B7 /* BonocleStatusService.swift in Sources */,
 				E935D78C2635A2D2001DC2BD /* EmojiMemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		275292032977FBC0002250B7 /* BonocleStatusCell.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				275292042977FBC0002250B7 /* ar */,
+			);
+			name = BonocleStatusCell.strings;
+			sourceTree = "<group>";
+		};
+		275292052977FBC0002250B7 /* BonocleStatus.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				275292062977FBC0002250B7 /* ar */,
+			);
+			name = BonocleStatus.strings;
+			sourceTree = "<group>";
+		};
+		275292092977FBC0002250B7 /* BonocleStatus.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2752920A2977FBC0002250B7 /* Base */,
+			);
+			name = BonocleStatus.storyboard;
+			sourceTree = "<group>";
+		};
+		2752920B2977FBC0002250B7 /* BonocleStatusCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2752920C2977FBC0002250B7 /* Base */,
+			);
+			name = BonocleStatusCell.xib;
+			sourceTree = "<group>";
+		};
+		27529217297805D9002250B7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27529218297805D9002250B7 /* ar */,
+				27529219297805D9002250B7 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E935D78226359BC8001DC2BD /* Debug */ = {
@@ -396,7 +516,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Memorize/Memorize.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Memorize/Preview Content\"";
 				DEVELOPMENT_TEAM = BMN2CA2LHF;
 				ENABLE_PREVIEWS = YES;
@@ -419,7 +541,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Memorize/Memorize.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Memorize/Preview Content\"";
 				DEVELOPMENT_TEAM = BMN2CA2LHF;
 				ENABLE_PREVIEWS = YES;

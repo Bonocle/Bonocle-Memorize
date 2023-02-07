@@ -18,6 +18,7 @@ public protocol BonocleDelegate: AnyObject {
     func imuEvent(peripheral: BonocleDevice, X: Int, Y: Int, Z: Int)
     func buttonEvent(peripheral: BonocleDevice, button: Buttons, event: ButtonEvents)
     func batteryState(peripheral: BonocleDevice, value: Int, charging: Bool)
+    func baroState(peripheral: BonocleDevice, value: Int)
     func centralManagerState(state: BluetoothState)
     func UpdateDelegate()
 }
@@ -29,6 +30,7 @@ public extension BonocleDelegate {
     func imuEvent(peripheral: BonocleDevice, X: Int, Y: Int, Z: Int){}
     func buttonEvent(peripheral: BonocleDevice, button: Buttons, event: ButtonEvents){}
     func batteryState(peripheral: BonocleDevice, value: Int, charging: Bool){}
+    func baroState(peripheral: BonocleDevice, value: Int){}
     func centralManagerState(state: BluetoothState){}
     func UpdateDelegate(){}
 }

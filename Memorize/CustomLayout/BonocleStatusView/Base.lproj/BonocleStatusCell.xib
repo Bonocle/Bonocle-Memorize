@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="BonocleStatusCell" customModule="Memorize" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="9k2-Tf-I8l">
+                        <rect key="frame" x="24" y="22.5" width="122.5" height="35.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Andrew's Bonocle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMg-hm-9G3">
+                                <rect key="frame" x="0.0" y="0.0" width="122.5" height="17.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
+                                <color key="textColor" name="MainColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbx-pD-0nz">
+                                <rect key="frame" x="0.0" y="23.5" width="122.5" height="12"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="10"/>
+                                <color key="textColor" name="Green"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rX-ii-wBp">
+                        <rect key="frame" x="270" y="28" width="24" height="24"/>
+                        <state key="normal" image="active-state"/>
+                        <connections>
+                            <action selector="deviceConnectionTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ALS-6I-X5m"/>
+                        </connections>
+                    </button>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="yrx-gV-hH5">
+                        <rect key="frame" x="270" y="28" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="BJ9-O2-Skk"/>
+                            <constraint firstAttribute="height" constant="24" id="uTF-Mf-oCI"/>
+                        </constraints>
+                    </activityIndicatorView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9rX-ii-wBp" firstAttribute="centerY" secondItem="9k2-Tf-I8l" secondAttribute="centerY" id="TXV-cP-uuT"/>
+                    <constraint firstAttribute="trailing" secondItem="yrx-gV-hH5" secondAttribute="trailing" constant="26" id="Zhd-eD-RuU"/>
+                    <constraint firstAttribute="trailing" secondItem="9rX-ii-wBp" secondAttribute="trailing" constant="26" id="aaZ-gG-1GJ"/>
+                    <constraint firstItem="yrx-gV-hH5" firstAttribute="centerY" secondItem="9k2-Tf-I8l" secondAttribute="centerY" id="kIK-xp-aBb"/>
+                    <constraint firstItem="9k2-Tf-I8l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="oTG-Mj-shS"/>
+                    <constraint firstItem="9k2-Tf-I8l" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pfc-zS-F13"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="deviceConnectionBtn" destination="9rX-ii-wBp" id="26Z-5r-XfF"/>
+                <outlet property="deviceNameLabel" destination="eMg-hm-9G3" id="zLs-C3-sde"/>
+                <outlet property="deviceStateLabel" destination="xbx-pD-0nz" id="Ld2-SM-J4N"/>
+                <outlet property="loadder" destination="yrx-gV-hH5" id="25b-9K-QVv"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="71.651785714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="active-state" width="24" height="24"/>
+        <namedColor name="Green">
+            <color red="0.024000000208616257" green="0.76099997758865356" blue="0.43900001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainColor">
+            <color red="0.11400000005960464" green="0.23100000619888306" blue="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

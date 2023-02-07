@@ -10,7 +10,7 @@ target 'Memorize' do
 
   # Pods for Memorize
 
-    pod 'BonocleKit', '~> 0.5.1'
+  pod 'BonocleKit', '~> 0.5.6'
 
 
 end
